@@ -1,0 +1,76 @@
+//Custom Properties
+
+:root {
+  //Colors
+
+  //Primary
+  //Text
+  --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  //Gradient
+  //Background Gradient
+  --softViolet: hsl(273, 75%, 66%);
+  --softblue: hsl(240, 73%, 65%);
+
+  //Neutral
+  // Text
+  --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --darkGrayishBlue: hsl(240, 6%, 50%);
+  //Dividers
+  --lightGrayishBlue: hsl(240, 5%, 91%);
+
+  font-family: "Kumbh Sans", sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #af67e9;
+  background: linear-gradient(
+    0deg,
+    hsl(240, 73%, 65%),
+    hsl(273, 75%, 66%) 100%
+  );
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 0 25px;
+
+  // background-color: #4158D0;
+  // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.main {
+  background-color: var(--lightGrayishBlue);
+  border-radius: 50px;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--lightGrayishBlue);
+  &__attribution {
+    font-size: 11px;
+    line-height: 2rem;
+    text-align: center;
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
