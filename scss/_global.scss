@@ -18,59 +18,99 @@
   --darkGrayishBlue: hsl(240, 6%, 50%);
   //Dividers
   --lightGrayishBlue: hsl(240, 5%, 91%);
+}
 
-  font-family: "Kumbh Sans", sans-serif;
-}
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 body {
-  background: #af67e9;
+  font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(
-    0deg,
-    hsl(240, 73%, 65%),
-    hsl(273, 75%, 66%) 100%
+    to bottom,
+    var(--softViolet),
+    var(--softblue)
   );
   background-repeat: no-repeat;
-
-  overflow: hidden;
+  background-size: cover;
   min-height: 100vh;
-  padding: 0 25px;
-
-  // background-color: #4158D0;
-  // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-}
-
-.main {
-  background-color: var(--lightGrayishBlue);
-  border-radius: 50px;
-}
-
-.footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 0;
-  width: 100%;
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  background: var(--lightGrayishBlue);
-  &__attribution {
-    font-size: 11px;
-    line-height: 2rem;
-    text-align: center;
-    a {
-      color: hsl(228, 45%, 44%);
+  
+  overflow: hidden;
+}
+
+.main {
+  max-width: 58rem;
+  height: 32rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  border-radius: 1.5rem;
+  margin: 1.5rem; //OJO
+
+  :hover .image__outer {
+    margin-left: -6rem;
+  }
+}
+
+.image {
+  position: relative;
+  padding: 50px 0;
+  left: -1.55rem;
+
+  &__pattern {
+    position: absolute;
+    top: -19rem;
+    left: -36.25rem;
+    z-index: -1;
+  }
+  &__outer {
+    position: absolute;
+    top: 12rem;
+    margin-left: -4.5rem;
+    transition: all 300ms ease;
+  }
+
+  &__inner {
+    picture{
+      margin-left: -5rem;
     }
+    margin-left: 1.5rem;
+    overflow: hidden;
+    
+  }
+}
+
+.list{
+  padding: 3.125rem;
+  padding-bottom: 1.25rem;
+
+}
+
+.title{
+  color:var(--veryDarkDesaturatedBlue);
+  font-weight: 700;
+  font-size: 1.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.article{
+  border-bottom: 1px solid var(--darkGrayishBlue);
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1rem 1rem 1rem 0;
   }
 }
