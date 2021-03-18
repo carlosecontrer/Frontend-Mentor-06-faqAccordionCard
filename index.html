@@ -40,7 +40,7 @@
       <article class="article">
         <h2 class="article__title">
           How many team members can I invite?
-          <span><img src="./images/icon-arrow-down.svg" alt="" /></span>
+          <span><img class="icon" src="./images/icon-arrow-down.svg" alt="" /></span>
         </h2>
         <div class="article__container">
           <p class="article__text">
@@ -54,7 +54,7 @@
       <article class="article">
         <h2 class="article__title">
           What is the maximum file upload size?
-          <span><img src="./images/icon-arrow-down.svg" alt="" /></span>
+          <span><img class="icon" src="./images/icon-arrow-down.svg" alt="" /></span>
         </h2>
         <div class="article__container">
           <p class="article__text">
@@ -69,7 +69,7 @@
       <article class="article">
         <h2 class="article__title">
           How do I reset my password?
-          <span><img src="./images/icon-arrow-down.svg" alt="" /></span>
+          <span><img class="icon" src="./images/icon-arrow-down.svg" alt="" /></span>
         </h2>
         <div class="article__container">
           <p class="article__text">
@@ -83,7 +83,7 @@
       <article class="article">
         <h2 class="article__title">
           Can I cancel my subscription?
-          <span><img src="./images/icon-arrow-down.svg" alt="" /></span>
+          <span><img class="icon" src="./images/icon-arrow-down.svg" alt="" /></span>
         </h2>
         <div class="article__container">
           <p class="article__text">
@@ -97,7 +97,7 @@
       <article class="article">
         <h2 class="article__title">
           Do you provide additional support?
-          <span><img src="./images/icon-arrow-down.svg" alt="" /></span>
+          <span><img class="icon" src="./images/icon-arrow-down.svg" alt="" /></span>
         </h2>
         <div class="article__container">
           <p class="article__text">
@@ -113,7 +113,20 @@
 
 
   <script>
-    document.querySelectorAll('.article__title').forEach()
+
+
+    ((d) => {
+      const $articleTitle = d.querySelector(".article__title"),
+        $articleText = d.querySelector(".article__text"),
+        $icon = d.querySelector(".icon");
+
+      $articleTitle.addEventListener("click", (e) => {
+        $articleTitle.classList.toggle("article__title--active");
+        $articleText.classList.toggle("article__text--active");
+        $icon.classList.toggle("icon--active");
+      });
+
+    })(document)
   </script>
 </body>
 
