@@ -51,6 +51,8 @@ body {
   background-color: white;
   border-radius: 1.5rem;
   margin: 1.5rem;
+  -webkit-box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.3);
 }
 
 .main :hover .image__outer {
@@ -91,12 +93,13 @@ body {
 .list {
   padding: 3.125rem;
   padding-bottom: 1.25rem;
+  overflow: hidden;
 }
 
 .title {
   color: var(--veryDarkDesaturatedBlue);
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 2rem;
   padding-bottom: 1.25rem;
 }
 
@@ -152,5 +155,55 @@ body {
 .icon--active {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+@media screen and (max-width: 890px) {
+  .main {
+    max-width: 30rem;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin-top: 20%;
+    margin-bottom: 5%;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    min-height: 70vh;
+  }
+  .list {
+    padding: 1.75rem;
+  }
+  .image {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -11rem;
+    padding: 0;
+  }
+  .image__pattern {
+    top: 6.25rem;
+    left: 1.75rem;
+  }
+  .image__outer {
+    display: none;
+  }
+  .image__inner {
+    margin-left: 0;
+    overflow: visible;
+  }
+  .image__inner picture {
+    margin-left: 0;
+  }
+  .title {
+    text-align: center;
+  }
+  .article__title {
+    font-size: 0.80rem;
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+  }
+  .article__text {
+    font-size: .75rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
